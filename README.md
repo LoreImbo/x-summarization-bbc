@@ -6,9 +6,9 @@ For the following analysis, the dataset used is the X-SUM database, a collection
 
 The text technique applied on the dataset is text summarization; there are two main families of methods to solve a text summarization problem: extraction-based summarization and abstraction-based summarization.
 
-Extraction-based summarization is a family of techniques that, starting from the dictionary of words of a specific document, try to determine which are the most relevant words and combine them in order to create a summary.
+- Extraction-based summarization is a family of techniques that, starting from the dictionary of words of a specific document, try to determine which are the most relevant words and combine them in order to create a summary.
 
-Abstraction-based summarization, on the other hand, is based on more advanced deep learning techniques. This family tries to copy a typical human behavior, allowing the model to add and generate words that are considered relevant but are not in the vocabulary of a given document.
+- Abstraction-based summarization, on the other hand, is based on more advanced deep learning techniques. This family tries to copy a typical human behavior, allowing the model to add and generate words that are considered relevant but are not in the vocabulary of a given document.
 
 For the given analysis, the following models have been considered:
 
