@@ -10,6 +10,9 @@ The text technique applied on the dataset is text summarization; there are two m
 
 - Abstraction-based summarization, on the other hand, is based on more advanced deep learning techniques. This family tries to copy a typical human behavior, allowing the model to add and generate words that are considered relevant but are not in the vocabulary of a given document.
 
+<img src="https://github.com/LoreImbo/x-summarization-bbc/blob/main/imagese/extractive.jpg?raw=true">
+
+
 For the given analysis, the following models have been considered:
 
 - Baseline
@@ -39,6 +42,8 @@ Evaluation of the results
 
 
 At the state of the art, one of the most used alternatives of a human evaluation of text summarization results, clearly not a scalable method, is the Rouge statistic, that is the one used for the current work. ROUGE stands for Recall-Oriented Understudy for Gisting Evaluation. It includes measures to automatically determine the quality of a summary by comparing it to ideal summaries created by humans. The proposed models obtained the following results:
+
+<img src="https://github.com/LoreImbo/x-summarization-bbc/blob/main/imagese/rouge_sum.png?raw=true">
 
 
 To have a better understanding of the differences between summarization techniques, the following table report the results obtained on a specific document from the test set.
