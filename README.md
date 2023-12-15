@@ -30,6 +30,14 @@ PEGASUS (Pre-training with Extracted Gap-sentences for Abstractive SUmmarization
 
 Evaluation of the results
 
+|              | ROUGE-1    | ROUGE-2    | ROUGE-L | ROUGE-L SUM |
+| ------------ | --------- | --------- | --------- | ----------- |
+| Baseline     | 0.168     | 0.020     | 0.107     | 0.107       |
+| T5           | 0.171     | 0.023     | 0.117     | 0.166       |
+| BART         | 0.203     | 0.041     | 0.135     | 0.166       |
+| PEGASUS      | 0.472     | 0.269     | 0.412     | 0.414       |
+
+
 At the state of the art, one of the most used alternatives of a human evaluation of text summarization results, clearly not a scalable method, is the Rouge statistic, that is the one used for the current work. ROUGE stands for Recall-Oriented Understudy for Gisting Evaluation. It includes measures to automatically determine the quality of a summary by comparing it to ideal summaries created by humans. The proposed models obtained the following results:
 
 
@@ -40,7 +48,13 @@ From both a human evaluation and an analytical one, it is clear the below summar
 
 Fine tuning of the best model
 
+
+
 In order to improve the results obtained on the best model, we have implemented a fine tuning strategy on the Pegasus model. Fine tuning allows us to adjust the weights estimated on a huge dataset in order to become more similar to a specific task. In this case, the goal of the strategy is to adapt the Pegasus model to sport documents, but still starting from the original weights. The training phase uses 8 elements for each training batch and 4 for each validation one. This step required 8 epochs and around 9 hours of training. After this step, the improvement on the validation set was very limited so we decided to not continue more.
 
+|              | ROUGE-1    | ROUGE-2    | ROUGE-L | ROUGE-L SUM |
+| ------------ | --------- | --------- | --------- | ----------- |
+| PEGASUS      | 0.472     | 0.269     | 0.412     | 0.414       |
+| PEGASUS FINE-TUNED     | 0.497     | 0.275     | 0.418     | 0.418       |
 
 The table above shows that the fine tuning model proposed improves the performance compared to the original one. It means that the new version is more capable to summarize sport documents, that is the main goal of the analysis. In particular, the best improvement is observed on the ROUGE-1 metric, so we can interpret the results as an improvement in recognizing relevant unigrams in a starting document.
